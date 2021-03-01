@@ -54,9 +54,9 @@
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GAME STATE" />
                   <HBox alignment="CENTER" prefHeight="315.0" prefWidth="744.0" spacing="15.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="160.0" styleClass="rock" stylesheets="@../CSS/rock.css" />
-                        <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="160.0" styleClass="paper" stylesheets="@../CSS/paper.css" />
-                        <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="160.0" styleClass="scissors" stylesheets="@../CSS/scissors.css" />
+                        <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="160.0" styleClass="rock" stylesheets="@../CSS/rockpaperscissors.css" />
+                        <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="160.0" styleClass="paper" stylesheets="@../CSS/rockpaperscissors.css" />
+                        <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="160.0" styleClass="scissors" stylesheets="@../CSS/rockpaperscissors.css" />
                      </children>
                   </HBox>
                </children>

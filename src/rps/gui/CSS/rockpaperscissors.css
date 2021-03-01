@@ -1,0 +1,55 @@
+.button{
+    -fx-background-color: #FFAE42;
+}
+.button:hover{
+    -fx-background-color: #ffb366;
+}
+.textfield{
+    -fx-background-color:  #F4ECC2;
+    -fx-border-color:  #FFAE42;
+}
+
+.label{
+    -fx-text-fill: #FFAE42;
+    -fx-font-weight: bold
+;
+}
+
+.rock {
+    -fx-background-image: url("../images/rockorange.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: Transparent;
+    -fx-border-color: #FFAE42;
+    -fx-border-width: 3;
+}
+
+.paper {
+    -fx-background-image: url("../images/paperorange.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: Transparent;
+    -fx-border-color: #FFAE42;
+    -fx-border-width: 3;
+}
+
+.scissors {
+    -fx-background-image: url("../images/scissorsorange.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: Transparent;
+    -fx-border-color: #FFAE42;
+    -fx-border-width: 3;
+}
+
+.rock:hover {
+    -fx-background-color: #FFAE42;
+    -fx-background-image: url("../images/rockblack.png");
+}
+
+.paper:hover {
+    -fx-background-color: #FFAE42;
+    -fx-background-image: url("../images/paperblack.png");
+}
+
+.scissors:hover {
+    -fx-background-color: #FFAE42;
+    -fx-background-image: url("../images/scissorsblack.png");
+}
