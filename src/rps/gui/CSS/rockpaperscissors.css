@@ -4,6 +4,12 @@
 .button:hover{
     -fx-background-color: #ffb366;
 }
+
+.box{
+    -fx-background-color:black;
+    -fx-border-color: #FFAE42;
+    -fx-border-width: 6;
+}
 .textfield{
     -fx-background-color:  #F4ECC2;
     -fx-border-color:  #FFAE42;
