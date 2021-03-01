@@ -1,8 +1,16 @@
 .button{
-    -fx-background-color: #FFAE42;
+    -fx-background-color: transparent;
+    -fx-background-size: 100% 100%;
+    -fx-border-radius: 6;
+    -fx-border-color: #FFAE42;
+    -fx-text-fill: #FFAE42;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-border-width: 4;
 }
 .button:hover{
-    -fx-background-color: #ffb366;
+    -fx-background-color: #FFAE42;
+    -fx-text-fill: black;
 }
 
 .box{
@@ -13,6 +21,8 @@
 .textfield{
     -fx-background-color:  #F4ECC2;
     -fx-border-color:  #FFAE42;
+    -fx-border-width: 3;
+    -fx-font-weight: bold;
 }
 
 .label{

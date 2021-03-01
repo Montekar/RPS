@@ -30,7 +30,7 @@
                      </VBox.margin>
                   </Label>
                   <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="201.0" styleClass="textfield" stylesheets="@../CSS/rockpaperscissors.css" />
-                  <Button mnemonicParsing="false" onAction="#startGame" prefHeight="0.0" prefWidth="95.0" stylesheets="@../CSS/rockpaperscissors.css" text="Start">
+                  <Button mnemonicParsing="false" onAction="#startGame" prefHeight="33.0" prefWidth="91.0" stylesheets="@../CSS/rockpaperscissors.css" text="PLAY">
                      <VBox.margin>
                         <Insets bottom="15.0" top="15.0" />
                      </VBox.margin>
