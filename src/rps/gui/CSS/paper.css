@@ -1,4 +1,12 @@
-.bodybg{
-    -fx-background-image: url("../images/papernew.png");
+.paper{
+    -fx-background-image: url("../images/paperorange.png");
     -fx-background-size: 100% 100%;
+    -fx-background-color: Transparent;
+    -fx-border-color: #FFAE42;
+    -fx-border-width: 3;
+}
+
+.paper:hover {
+    -fx-background-color: #FFAE42;
+    -fx-background-image: url("../images/paperblack.png");
 }
