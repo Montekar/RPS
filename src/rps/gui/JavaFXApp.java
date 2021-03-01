@@ -24,6 +24,7 @@ public class JavaFXApp extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/rps/gui/view/Start.fxml"));
         stage.setTitle("Welcome to the Rock-Paper-Scissor game!");
         stage.setScene(new Scene(root));
+        stage.setResizable(false);
         stage.show();
     }
 }
