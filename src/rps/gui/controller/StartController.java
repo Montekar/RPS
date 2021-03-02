@@ -5,17 +5,29 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
+import java.util.Random;
+
 public class StartController {
+    public TextField fieldName;
+
     public void startGame(ActionEvent ae) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("../view/GameView.fxml"));
-            Stage stage = (Stage) ((Node) ae.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-        } catch (Exception e) {
-            e.printStackTrace();
+        if(!fieldName.getText().isEmpty()) {
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("../view/GameView.fxml"));
+                Stage stage = (Stage) ((Node) ae.getSource()).getScene().getWindow();
+                stage.setScene(new Scene(root));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
+    }
+
+    public void onClickGenerate(ActionEvent actionEvent) {
+        Random rand = new Random();
+        fieldName.setText("Player" + (rand.nextInt(999) + 1));
     }
 }
