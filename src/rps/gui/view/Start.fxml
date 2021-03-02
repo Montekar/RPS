@@ -11,7 +11,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rps.gui.controller.StartController">
    <center>
-      <VBox alignment="CENTER" prefHeight="412.0" prefWidth="623.0" spacing="5.0" styleClass="bodybg" stylesheets="@../CSS/StartBG.css">
+      <VBox alignment="CENTER" prefHeight="412.0" prefWidth="623.0" spacing="5.0" styleClass="background" stylesheets="@../CSS/menu.css">
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="box" stylesheets="@../CSS/rockpaperscissors.css">
                <children>
