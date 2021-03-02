@@ -75,14 +75,17 @@
 .rock:pressed{
     -fx-background-color: black;
     -fx-border-width: 0;
+    -fx-background-image: url("../images/rockblack.png");
 }
 
 .paper:pressed{
     -fx-background-color: black;
     -fx-border-width: 0;
+    -fx-background-image: url("../images/paperblack.png");
 }
 
 .scissors:pressed{
     -fx-background-color: black;
     -fx-border-width: 0;
+    -fx-background-image: url("../images/scissorsblack.png");
 }
