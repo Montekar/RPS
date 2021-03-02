@@ -1,67 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="611.0" prefWidth="703.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rps.gui.controller.GameViewController">
-   <children>
-      <VBox prefHeight="625.0" prefWidth="745.0">
+
+<BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rps.gui.controller.GameViewController">
+   <center>
+      <AnchorPane prefHeight="203.0" prefWidth="459.0" style="-fx-background-color: black;">
          <children>
-            <HBox alignment="CENTER" prefHeight="49.0" prefWidth="600.0">
+            <HBox alignment="CENTER" layoutY="27.0" prefHeight="196.0" prefWidth="804.0" styleClass="box" stylesheets="@../CSS/rockpaperscissors.css">
                <children>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Player" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Round:" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bot" />
-                     </children>
-                  </HBox>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="195.0" prefWidth="600.0">
-               <children>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="box" stylesheets="@../CSS/rockpaperscissors.css">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="box" stylesheets="@../CSS/rockpaperscissors.css">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VS" />
+                        <Label text="VS">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="box" stylesheets="@../CSS/rockpaperscissors.css">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </HBox>
                </children>
             </HBox>
-            <VBox alignment="CENTER">
+            <VBox alignment="CENTER" layoutY="399.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GAME STATE" />
-                  <HBox alignment="CENTER" prefHeight="315.0" prefWidth="744.0" spacing="15.0">
+                  <Label stylesheets="@../CSS/rockpaperscissors.css" text="Choose:">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="125.0" prefWidth="804.0" spacing="15.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="160.0" styleClass="rock" stylesheets="@../CSS/rockpaperscissors.css" />
-                        <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="160.0" styleClass="paper" stylesheets="@../CSS/rockpaperscissors.css" />
-                        <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="160.0" styleClass="scissors" stylesheets="@../CSS/rockpaperscissors.css" />
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="rock" stylesheets="@../CSS/rockpaperscissors.css" />
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="paper" stylesheets="@../CSS/rockpaperscissors.css" />
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="scissors" stylesheets="@../CSS/rockpaperscissors.css" />
                      </children>
                   </HBox>
                </children>
             </VBox>
          </children>
-      </VBox>
-   </children>
-</AnchorPane>
+      </AnchorPane>
+   </center>
+   <top>
+      <HBox alignment="CENTER" prefHeight="43.0" prefWidth="804.0" styleClass="box" stylesheets="@../CSS/rockpaperscissors.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Your Turn:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
