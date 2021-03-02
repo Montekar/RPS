@@ -73,16 +73,16 @@
 }
 
 .rock:pressed{
-    -fx-background-color: #D18700;
+    -fx-background-color: black;
     -fx-border-width: 0;
 }
 
 .paper:pressed{
-    -fx-background-color: #D18700;
+    -fx-background-color: black;
     -fx-border-width: 0;
 }
 
 .scissors:pressed{
-    -fx-background-color: #D18700;
+    -fx-background-color: black;
     -fx-border-width: 0;
 }
