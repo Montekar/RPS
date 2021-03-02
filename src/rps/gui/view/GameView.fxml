@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rps.gui.controller.GameViewController">
    <center>
       <AnchorPane prefHeight="203.0" prefWidth="459.0" style="-fx-background-color: black;">
@@ -39,22 +38,6 @@
                   </HBox>
                </children>
             </HBox>
-            <VBox alignment="CENTER" layoutY="399.0">
-               <children>
-                  <Label stylesheets="@../CSS/rockpaperscissors.css" text="Choose:">
-                     <font>
-                        <Font size="39.0" />
-                     </font>
-                  </Label>
-                  <HBox alignment="CENTER" prefHeight="125.0" prefWidth="804.0" spacing="15.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="rock" stylesheets="@../CSS/rockpaperscissors.css" />
-                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="paper" stylesheets="@../CSS/rockpaperscissors.css" />
-                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="scissors" stylesheets="@../CSS/rockpaperscissors.css" />
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
          </children>
       </AnchorPane>
    </center>
@@ -69,4 +52,22 @@
          </children>
       </HBox>
    </top>
+   <bottom>
+      <VBox alignment="CENTER" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label stylesheets="@../CSS/rockpaperscissors.css" text="Choose:">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="125.0" prefWidth="804.0" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="rock" stylesheets="@../CSS/rockpaperscissors.css" />
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="paper" stylesheets="@../CSS/rockpaperscissors.css" />
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="scissors" stylesheets="@../CSS/rockpaperscissors.css" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
 </BorderPane>
