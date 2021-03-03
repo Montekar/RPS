@@ -65,7 +65,6 @@ public class GameViewController {
         Optional<Result> res = gameManager.getGameState().getHistoricResults().stream().filter(x -> x.getRoundNumber() == roundNumber).findFirst();
         if (res.isPresent()) {
             Result result = res.get();
-            System.out.println(result.getType());
             if (result.getType() != ResultType.Tie) {
                 if (result.getWinnerPlayer().getPlayerType() == PlayerType.Human) {
                     setImageMove(imgFirstPlayer, result.getWinnerMove());
