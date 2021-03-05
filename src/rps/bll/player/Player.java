@@ -63,7 +63,7 @@ public class Player implements IPlayer {
         }
 
         //AI LOGIC
-            if (opponentHistory.size() > 3 && random.nextInt(100) > 49) {
+            if (opponentHistory.size() > 3 && random.nextInt(2) > 0) {
                 int rockUsed = 0;
                 int paperUsed = 0;
                 int scissorsUsed = 0;
