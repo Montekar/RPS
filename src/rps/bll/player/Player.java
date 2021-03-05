@@ -50,11 +50,10 @@ public class Player implements IPlayer {
     @Override
     public Move doMove(IGameState state) {
         Random random = new Random();
-        //AI
         ArrayList<Result> results = (ArrayList<Result>) state.getHistoricResults();
-        ArrayList<Move> opponentHistory = new ArrayList<>();
 
         //Getting opponent match history
+        ArrayList<Move> opponentHistory = new ArrayList<>();
         for (Result result : results) {
             if (result.getWinnerPlayer().getPlayerType() == getPlayerType()) {
                 opponentHistory.add(result.getLoserMove());
@@ -64,8 +63,7 @@ public class Player implements IPlayer {
         }
 
         //AI LOGIC
-        if (opponentHistory.size() > 3) {
-            if (random.nextInt(101) > 40) {
+            if (opponentHistory.size() > 3 && random.nextInt(100) > 49) {
                 int rockUsed = 0;
                 int paperUsed = 0;
                 int scissorsUsed = 0;
@@ -90,10 +88,9 @@ public class Player implements IPlayer {
                     return Move.Rock;
                 }
             }
-        }
 
+        //Random IF AI doesnt execute
         Move nextMove = null;
-
         switch (random.nextInt(3)) {
             case 0:
                 nextMove = Move.Rock;
