@@ -1,6 +1,7 @@
 package rps.bll.player;
 
 //Project imports
+
 import rps.bll.game.IGameState;
 import rps.bll.game.Move;
 import rps.bll.game.Result;
@@ -42,25 +43,69 @@ public class Player implements IPlayer {
 
     /**
      * Decides the next move for the bot...
+     *
      * @param state Contains the current game state including historic moves/results
      * @return Next move
      */
     @Override
     public Move doMove(IGameState state) {
-        //Historic data to analyze and decide next move...
-        ArrayList<Result> results = (ArrayList<Result>) state.getHistoricResults();
-
-        //Implement better AI here...
         Random random = new Random();
-        switch(random.nextInt(3)){
-            case 0:
-                return Move.Rock;
-            case 1:
-                return Move.Paper;
-            case 2:
-                return Move.Scissor;
+        //AI
+        ArrayList<Result> results = (ArrayList<Result>) state.getHistoricResults();
+        ArrayList<Move> opponentHistory = new ArrayList<>();
+
+        //Getting opponent match history
+        for (Result result : results) {
+            if (result.getWinnerPlayer().getPlayerType() == getPlayerType()) {
+                opponentHistory.add(result.getLoserMove());
+            } else {
+                opponentHistory.add(result.getWinnerMove());
+            }
         }
 
-        return null;
+        //AI LOGIC
+        if (opponentHistory.size() > 3) {
+            if (random.nextInt(101) > 40) {
+                int rockUsed = 0;
+                int paperUsed = 0;
+                int scissorsUsed = 0;
+
+                for (int i = opponentHistory.size() - 3; i < opponentHistory.size(); i++) {
+                    if (opponentHistory.get(i) == Move.Rock) {
+                        rockUsed++;
+                    } else if (opponentHistory.get(i) == Move.Paper) {
+                        paperUsed++;
+                    } else if (opponentHistory.get(i) == Move.Scissor) {
+                        scissorsUsed++;
+                    }
+
+                }
+                int mostOccurences = Math.max(Math.max(rockUsed, paperUsed), scissorsUsed);
+
+                if (mostOccurences == rockUsed) {
+                    return Move.Paper;
+                } else if (mostOccurences == paperUsed) {
+                    return Move.Scissor;
+                } else {
+                    return Move.Rock;
+                }
+            }
+        }
+
+        Move nextMove = null;
+
+        switch (random.nextInt(3)) {
+            case 0:
+                nextMove = Move.Rock;
+                break;
+            case 1:
+                nextMove = Move.Paper;
+                break;
+            case 2:
+                nextMove = Move.Scissor;
+                break;
+        }
+
+        return nextMove;
     }
 }
